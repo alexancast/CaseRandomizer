@@ -1,13 +1,14 @@
+var data;
+
 // Ladda in data från data.json
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '../JSON/data.json', true);
+xhr.open('GET', 'data.json', true);
 xhr.onload = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
-        var data = JSON.parse(xhr.responseText);
+        data = JSON.parse(xhr.responseText);
         console.log(data); // för att se att data har laddats in korrekt
     }
 };
-
 xhr.send(null);
 
 // Metod som anropas när knapp 1 klickas på

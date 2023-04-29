@@ -1,11 +1,11 @@
-var data;
+var data; // Deklarera variabeln data utanför onload-händelsen
 
 // Ladda in data från data.json
 var xhr = new XMLHttpRequest();
 xhr.open('GET', 'data.json', true);
 xhr.onload = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
-        data = JSON.parse(xhr.responseText);
+        data = JSON.parse(xhr.responseText); // Tilldela värdet av data när det har laddats in
         console.log(data); // för att se att data har laddats in korrekt
     }
 };
